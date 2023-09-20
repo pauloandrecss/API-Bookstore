@@ -34,4 +34,4 @@ jobs:
 
     - name: Tests
       shell: bash 
-      run: docker compose exec web python manage.py test
+      run: python manage.py test
