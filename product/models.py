@@ -9,6 +9,9 @@ class Category(models.Model):
     def __unicode__(self):
         return self.title
     
+    def __str__(self):
+        return self.title
+    
 
 class Product(models.Model):
     title = models.CharField(max_length=100)
@@ -16,3 +19,6 @@ class Product(models.Model):
     price = models.PositiveIntegerField(null=True)
     active = models.BooleanField(default=True)
     categories = models.ManyToManyField(Category, blank=True)
+    
+    def __str__(self):
+        return self.title
